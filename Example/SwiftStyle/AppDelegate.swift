@@ -8,6 +8,19 @@
 
 import UIKit
 
+class Application: UIApplication {
+    override func sendEvent(_ event: UIEvent) {
+        super.sendEvent(event)
+    }
+}
+
+class Window: UIWindow {
+    override func sendEvent(_ event: UIEvent) {
+        super.sendEvent(event)
+        MyStyle.apply(to: self)
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.window = Window(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!
+        self.window?.makeKeyAndVisible()
         return true
     }
 

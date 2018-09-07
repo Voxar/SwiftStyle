@@ -14,6 +14,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		99391BBF21384AAA0059EF4C /* KeyPathValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99391BBE21384AAA0059EF4C /* KeyPathValueStore.swift */; };
 		A96CC15A89E89831F6507949 /* Pods_SwiftStyle_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E87AEC849DE3C9BB2B9729 /* Pods_SwiftStyle_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +30,7 @@
 
 /* Begin PBXFileReference section */
 		128668A8FDD465875B7D3690 /* Pods-SwiftStyle_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStyle_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftStyle_Tests/Pods-SwiftStyle_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		28CD37D12D57680EAEFB3276 /* SwiftStyle.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SwiftStyle.podspec; path = ../SwiftStyle.podspec; sourceTree = "<group>"; };
+		28CD37D12D57680EAEFB3276 /* SwiftStyle.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftStyle.podspec; path = ../SwiftStyle.podspec; sourceTree = "<group>"; };
 		3BFF2B1E523C43594016633B /* Pods-SwiftStyle_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStyle_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftStyle_Example/Pods-SwiftStyle_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		43E87AEC849DE3C9BB2B9729 /* Pods_SwiftStyle_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStyle_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* SwiftStyle_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftStyle_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,9 +45,11 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		725D489FC77D92C376810A53 /* Pods_SwiftStyle_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftStyle_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87CA8D47547E66E56456730A /* Pods-SwiftStyle_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStyle_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftStyle_Tests/Pods-SwiftStyle_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A267F03B423BDB53CEAD309B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		99391BBE21384AAA0059EF4C /* KeyPathValueStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeyPathValueStore.swift; path = ../SwiftStyle/Classes/KeyPathValueStore.swift; sourceTree = "<group>"; };
+		998DD81E213D7A5C00AF33A5 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = SwiftStyle/MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A267F03B423BDB53CEAD309B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DF3938A70D54AEE5C537DAA0 /* Pods-SwiftStyle_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftStyle_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftStyle_Example/Pods-SwiftStyle_Example.release.xcconfig"; sourceTree = "<group>"; };
-		E8F6FBDEC311D5436C6E8AB0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E8F6FBDEC311D5436C6E8AB0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				998DD81E213D7A5C00AF33A5 /* MyPlayground.playground */,
+				99391BBE21384AAA0059EF4C /* KeyPathValueStore.swift */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for SwiftStyle */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -349,6 +354,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				99391BBF21384AAA0059EF4C /* KeyPathValueStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -481,7 +487,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -495,6 +501,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftStyle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -510,6 +517,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftStyle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

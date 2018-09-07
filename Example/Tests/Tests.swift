@@ -2,49 +2,65 @@
 
 import Quick
 import Nimble
-import SwiftStyle
+@testable import SwiftStyle
 
-class TableOfContentsSpec: QuickSpec {
+class KeyPathValueStorageSpec: QuickSpec {
+    
+    class ClassSubject {
+        var property: String = "Hello"
+        var int: Int = 0
+    }
+    
+    class SubClassSubject: ClassSubject {
+        var subclassProperty: Float = 0
+    }
+    
+    struct StructSubject {
+        var property: String? = "Hello"
+        var int: Int = 0
+    }
+    
     override func spec() {
-        describe("these will fail") {
-
-            it("can do maths") {
-                expect(1) == 2
-            }
-
-            it("can read") {
-                expect("number") == "string"
-            }
-
-            it("will eventually fail") {
-                expect("time").toEventually( equal("done") )
+        describe("storing and applying values") {
+            
+            it("can store and apply to class types") {
+                var store = KeyPathValueStore<ClassSubject>()
+                
+                store[\.property] = "World"
+                store[\.int] = 22
+                
+                var subject = ClassSubject()
+                store.apply(to: &subject)
+                expect(subject.property).to(equal("World"))
+                expect(subject.int).to(equal(22))
             }
             
-            context("these will pass") {
-
-                it("can do maths") {
-                    expect(23) == 23
-                }
-
-                it("can read") {
-                    expect("🐮") == "🐮"
-                }
-
-                it("will eventually pass") {
-                    var time = "passing"
-
-                    DispatchQueue.main.async {
-                        time = "done"
-                    }
-
-                    waitUntil { done in
-                        Thread.sleep(forTimeInterval: 0.5)
-                        expect(time) == "done"
-
-                        done()
-                    }
-                }
+            it("can store and apply to class types with inheritance") {
+                var store = KeyPathValueStore<SubClassSubject>()
+                
+                store[\.property] = "World"
+                store[\.int] = 22
+                store[\.subclassProperty] = 1234.5678
+                
+                var subject = SubClassSubject()
+                store.apply(to: &subject)
+                expect(subject.property).to(equal("World"))
+                expect(subject.int).to(equal(22))
+                expect(subject.subclassProperty).to(equal(1234.5678))
             }
+            
+            it("can store and apply to struct types") {
+                
+                var store = KeyPathValueStore<StructSubject>()
+                store[\.property] = "World"
+                store[\.int] = 22
+                
+                var subject = StructSubject()
+                store.apply(to: &subject)
+                expect(subject.property).to(equal("World"))
+                expect(subject.int).to(equal(22))
+            }
+
         }
     }
 }
